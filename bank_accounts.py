@@ -1,4 +1,10 @@
 # Can you make this code work?
+#
+# DO NOT CHANGE THIS FILE!
+# It must run as-is!
+#
+# So the challenge is: what must you do to make
+# this file run perfectly without changing it?
 
 import banking
 from sys import exit
