@@ -8,10 +8,10 @@ my_savings_account = banking.BankAccount()
 
 # 1. Basic account functionality
 my_checking_account.balance = 0.00
+my_checking_account.deposit(100.00)
+my_checking_account.deposit(200.00)
 my_checking_account.deposit(300.00)
-my_checking_account.deposit(300.00)
-my_checking_account.deposit(300.00)
-my_checking_account.deposit(300.00)
+my_checking_account.deposit(600.00)
 my_checking_account.withdraw(200.00)
 
 if my_checking_account.balance != 1000.00:
@@ -26,18 +26,19 @@ if my_checking_account.balance != 1500.00:
     print("This bank can't be trusted! Failed at step 2.")
     exit()
 
-# 3. Guard against illegal activities
+# 3. Guard against overdrafts
 my_checking_account.withdraw(10000.00)
 if my_checking_account.balance != 1500.00:
     print("This bank can't be trusted! Failed at step 3.")
 
+# 4. Guard against overdraft during transfer
 my_checking_account.transfer(10000.00, my_savings_account)
 if my_checking_account.balance != 1500.00:
-    print("This bank can't be trusted! Failed at step 3.")
+    print("This bank can't be trusted! Failed at step 4.")
 
 # At this point the checking account should have $1500
 # and the savings account should have $500
-print("This bank seems trustworthy!  Here are the final balances:")
+print("Here are the final balances:")
 print("Checking account: ", my_checking_account.balance)
 print("Savings account: ", my_savings_account.balance)
 
