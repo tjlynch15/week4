@@ -7,7 +7,9 @@ There is just one challenge this week.
 
 Open the `bank_accounts.py` file.
 
-Your job is to make the code run without any errors.  If you're successful, you should see the following when you run the program:
+Your job is to make the code run as is, without any errors, and **without changing the code**.  (However, you *are* allowed to add *additional files* into the same folder).
+
+If you're successful, you should see the following when you run the program:
 
 ```
 Here are the final balances:
